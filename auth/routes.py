@@ -1,8 +1,9 @@
 from fastapi import APIRouter
+from .schemas import UserCreate
 
-router = APIrouter()
 
-@router.post("/login")
-    def login():
-        return {"message": " login"}
+router = APIRouter()
 
+@router.post("/singup")
+def singup(user: UserCreate):
+    return {"email":"user.emailstr"}
