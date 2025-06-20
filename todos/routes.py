@@ -1,4 +1,4 @@
-from fasatapi imort APIRouter
+from fastapi import APIRouter
 
 router = APIRouter()
 
