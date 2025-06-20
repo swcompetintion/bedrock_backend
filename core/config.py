@@ -1,10 +1,13 @@
-from pydantic import BaseSettings
+from pydantic_settings import BaseSettings
+
 
 class Settings(BaseSettings):
-    base_api_url: str ="/api/v1"
+    app_env: str = "development"
+    base_api_url: str = "/api/v1"
 
-    class Config:
-        env_file =".env"
+    model_config = {
+            "env_file": ".env",
+            "env_file_encoding": "utf-8"
+            }
 
 settings = Settings()
-
